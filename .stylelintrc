@@ -1,0 +1,21 @@
+{
+  "extends": "stylelint-config-standard",
+  "customSyntax": "postcss-scss",
+  "formatter": "stylelint-checkstyle-formatter",
+  "plugins": [
+    "stylelint-scss"
+  ],
+  "rules": {
+    "indentation": "tab",
+    "string-quotes": "single",
+    "selector-class-pattern": "^.*$",
+    "no-eol-whitespace": [
+      true,
+      {
+        "ignore": [
+          "empty-lines"
+        ]
+      }
+    ]
+  }
+}

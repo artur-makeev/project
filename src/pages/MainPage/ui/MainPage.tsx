@@ -1,11 +1,9 @@
-interface MainPageProps {}
+import { useTranslation } from 'react-i18next';
 
-const MainPage = ({}:MainPageProps) => {
-	return (
-		<div>
-			Main
-		</div>
-	)
+const MainPage = () => {
+	const { t } = useTranslation('main');
+
+	return <div>{t('Главная страница')}</div>;
 };
 
 export default MainPage;
