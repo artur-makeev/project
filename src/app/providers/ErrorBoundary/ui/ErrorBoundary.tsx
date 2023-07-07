@@ -1,6 +1,6 @@
 import type { ErrorInfo, ReactNode } from 'react';
 import React, { Suspense } from 'react';
-import { AppError } from 'widgets/Error/ui/AppError';
+import { AppError } from 'widgets/AppError/ui/AppError';
 
 interface ErrorBoundaryProps {
 	children: ReactNode;
@@ -19,17 +19,11 @@ export class ErrorBoundary extends React.Component<
 		this.state = { hasError: false };
 	}
 
-	static getDerivedStateFromError(error: Error) {
-		// Update state so the next render will show the fallback UI.
+	static getDerivedStateFromError() {
 		return { hasError: true };
 	}
 
 	componentDidCatch(error: Error, info: ErrorInfo) {
-		// Example "componentStack":
-		//   in ComponentThatThrows (created by App)
-		//   in ErrorBoundary (created by App)
-		//   in div (created by App)
-		//   in App
 		console.log(error, info.componentStack);
 	}
 
@@ -37,7 +31,6 @@ export class ErrorBoundary extends React.Component<
 		const { hasError } = this.state;
 		const { children } = this.props;
 		if (hasError) {
-			// You can render any custom fallback UI
 			return (
 				<Suspense fallback={''}>
 					<AppError />
