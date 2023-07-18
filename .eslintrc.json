@@ -8,7 +8,8 @@
   "plugins": [
     "@typescript-eslint",
     "i18next",
-    "prettier"
+    "prettier",
+    "react-hooks"
   ],
   "extends": [
     "eslint:recommended",
@@ -30,6 +31,8 @@
         ]
       }
     ],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
     "prettier/prettier": [
       "error",
       {
