@@ -4,7 +4,6 @@ import { Input } from './Input';
 const meta: Meta<typeof Input> = {
 	title: 'shared/Input',
 	component: Input,
-	tags: ['autodocs'],
 	argTypes: {
 		backgroundColor: { control: 'color' },
 	},

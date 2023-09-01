@@ -2,16 +2,15 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
 import MainPage from './MainPage';
-import { ReduxDecorator } from 'shared/config/storybook/ReduxDecorator/ReduxDecorator';
+import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
 
 const meta: Meta<typeof MainPage> = {
 	title: 'pages/MainPage',
 	component: MainPage,
-	tags: ['autodocs'],
 	argTypes: {
 		backgroundColor: { control: 'color' },
 	},
-	decorators: [ReduxDecorator],
+	decorators: [StoreDecorator({ counter: { value: 0 } })],
 } as Meta<typeof MainPage>;
 
 export default meta;

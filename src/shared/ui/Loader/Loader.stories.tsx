@@ -6,7 +6,6 @@ import { Theme } from 'app/providers/ThemeProvider';
 const meta: Meta<typeof Loader> = {
 	title: 'shared/Loader',
 	component: Loader,
-	tags: ['autodocs'],
 	argTypes: {
 		backgroundColor: { control: 'color' },
 	},

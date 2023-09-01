@@ -6,7 +6,6 @@ import { Theme } from 'app/providers/ThemeProvider';
 const meta: Meta<typeof Modal> = {
 	title: 'shared/Modal',
 	component: Modal,
-	tags: ['autodocs'],
 	argTypes: {
 		backgroundColor: { control: 'color' },
 	},

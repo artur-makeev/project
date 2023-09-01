@@ -6,7 +6,6 @@ import { AppError } from './AppError';
 const meta: Meta<typeof AppError> = {
 	title: 'widget/AppError',
 	component: AppError,
-	tags: ['autodocs'],
 	argTypes: {
 		backgroundColor: { control: 'color' },
 	},
